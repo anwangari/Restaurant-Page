@@ -219,22 +219,262 @@ nav button.active {
     color: #e74c3c;
   }
   
-  /* Other Pages */
-  .menu-page, .about-page {
-    padding: 4rem 2rem;
+/* MENU PAGE STYLES */
+.menu-page {
+    padding: 2rem 0;
+  }
+  
+  .menu-header {
     text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    margin-bottom: 3rem;
   }
   
-  .menu-page h1, .about-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  .menu-header h1 {
+    font-size: 3rem;
     color: #2c3e50;
+    margin-bottom: 1rem;
   }
   
-  .placeholder-text {
+  .menu-subtitle {
     font-size: 1.2rem;
     color: #666;
     font-style: italic;
+  }
+  
+  .menu-section {
+    margin-bottom: 4rem;
+  }
+  
+  .menu-category-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #e74c3c;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .menu-item-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border-left: 4px solid transparent;
+  }
+  
+  .menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    border-left-color: #e74c3c;
+  }
+  
+  .popular-badge {
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  
+  .menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+  }
+  
+  .menu-item-name {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .menu-item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-left: 1rem;
+  }
+  
+  .menu-item-description {
+    color: #666;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  
+  /* ABOUT PAGE STYLES */
+  .about-page {
+    padding: 2rem 0;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+  }
+  
+  .about-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-style: italic;
+  }
+  
+  .story-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+  }
+  
+  .story-section h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .story-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .story-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .team-section {
+    margin-bottom: 3rem;
+  }
+  
+  .team-section h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .team-member-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .member-avatar {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .member-name {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .member-role {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .member-bio {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+  
+  .values-section {
+    background: #f8f9fa;
+    padding: 3rem;
+    border-radius: 15px;
+  }
+  
+  .values-section h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .value-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .value-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  .value-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
   }
   
   /* Animations */
@@ -279,5 +519,34 @@ nav button.active {
     
     .contact-info {
       grid-template-columns: 1fr;
+    }
+  }
+
+  /* RESPONSIVE STYLES FOR MENU AND ABOUT */
+@media (max-width: 768px) {
+    .menu-header h1, .about-header h1 {
+      font-size: 2.2rem;
+    }
+    
+    .menu-items-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .menu-item-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .menu-item-price {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+    
+    .team-grid, .values-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .story-section {
+      padding: 2rem 1rem;
     }
   }
