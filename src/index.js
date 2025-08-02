@@ -1,3 +1,4 @@
 import "./styles.css";
+import { initializeWebsite } from "./main-app";
 
-console.log("Hello, Welcome to my Restaurant");
+document.addEventListener('DOMContentLoaded', initializeWebsite);
