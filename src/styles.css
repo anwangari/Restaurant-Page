@@ -49,28 +49,45 @@ nav button.active {
     width: 100%;
   }
   
-  .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f4f4f4" width="1200" height="600"/><circle fill="%23ddd" cx="300" cy="200" r="50"/><circle fill="%23ddd" cx="900" cy="150" r="30"/><rect fill="%23ddd" x="400" y="300" width="400" height="200" rx="10"/></svg>');
-    background-size: cover;
-    background-position: center;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                linear-gradient(135deg, #2c3e50, #3498db);
     color: white;
-    margin: 2rem 0;
-    border-radius: 15px;
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    position: relative;
     overflow: hidden;
-  }
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
+    animation: float 20s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-10px) rotate(360deg); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
   
-  .hero-content h1 {
+.hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     animation: fadeInUp 1s ease-out;
-  }
+}
   
   .hero-content p {
     font-size: 1.3rem;
